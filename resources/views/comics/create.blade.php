@@ -16,7 +16,7 @@
                      <input type="text" id="title" name="title">
                   </div>
 
-                  <label for="series">Serie</label>
+                  <label for="series">Series</label>
                   <div class="col-12">
                      <input type="text" id="series" name="series">
                   </div>
@@ -30,7 +30,7 @@
                   <div class="col-12">
                      <input type="number" id="price" name="price">
                   </div>
-                  
+
                   <label for="sale_date">Sale date</label>
                   <div class="col-12">
                      <input type="date" id="sale_date" name="sale_date">

@@ -17,11 +17,11 @@
                      <div class="col-md-8">
                         <div class="card-body">
                            <h5 class="card-title">{{ $comic->title }}</h5>
-                           <p class="card-text"><strong>Serie:</strong> {{ $comic->series }}</p>
-                           <p class="card-text"><strong>Data di uscita:</strong> {{ $comic->sale_date }}</p>
-                           <p class="card-text text-capitalize"><small class="text-muted"><strong>Tipo:</strong>
+                           <p class="card-text"><strong>Series:</strong> {{ $comic->series }}</p>
+                           <p class="card-text"><strong>release:</strong> {{ $comic->sale_date }}</p>
+                           <p class="card-text text-capitalize"><small class="text-muted"><strong>type:</strong>
                                  {{ $comic->type }}</small></p>
-                           <a href="{{ route('comics.show', $comic->id) }}" class="btn btn">Scopri di più</a>
+                           <a href="{{ route('comics.show', $comic->id) }}" class="btn btn">Discover</a>
                         </div>
                      </div>
                   </div>
