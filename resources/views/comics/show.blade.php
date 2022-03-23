@@ -17,7 +17,13 @@
                   <p class="card-text">{{ $comic->description }}</p>
                   <p class="card-text text-capitalize"><small class="text-muted"><strong>Type:</strong>
                         {{ $comic->type }}</small></p>
-                  <a href="{{ route('comics.index') }}" class="btn btn">back</a>
+                  <form action="{{route('comics.destroy' , $comic->id)}}" method='POST'>
+                     @csrf
+                     @method('DELETE')
+                     <button  class="btn" type="submit">delete</button>      
+
+                  </form>
+                  <a href="{{ route('comics.index') }}" class="btn">back</a>
                </div>
             </div>
          </div>

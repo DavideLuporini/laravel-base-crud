@@ -28,7 +28,7 @@
                </div>
             </div>
          @empty
-            <h1 class="text-center">Nessun Fumetto da mostrare</h1>
+            <h1 class="text-center">no comics</h1>
          @endforelse
       </div>
    </div>
