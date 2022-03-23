@@ -27,6 +27,9 @@
                   </div>
                </div>
             </div>
+         @empty
+            <h1 class="text-center">Nessun Fumetto da mostrare</h1>
+         @endforelse
       </div>
    </div>
 @endsection
