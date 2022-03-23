@@ -7,7 +7,7 @@
       <div class="row">
          <div class="col-12">
 
-            <form method="POST" action="{{ route('comics.edit' , $comic) }}">
+            <form method="POST" action="{{ route('comics.update' , $comic) }}">
                 @method('PUT')
                 @csrf
                @csrf
