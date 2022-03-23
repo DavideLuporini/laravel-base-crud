@@ -52,8 +52,8 @@
 
                   <div class="col-12 text-center">
                      <div class="h-100 w-100 d-flex justify-content-center align-items-start">
-                        <button type="submit" class="btn btn-primary me-3">Invia</button>
-                        <button type="reset" class="btn btn-secondary">Pulisci i campi</button>
+                        <button type="submit" class="btn btn-primary me-3">send</button>
+                        <button type="reset" class="btn btn-warning">clear</button>
                      </div>
                   </div>
                </div>
