@@ -13,41 +13,41 @@
 
                   <label for="title">Title</label>
                   <div class="col-12">
-                     <input type="text" id="title" name="title">
+                     <input type="text" id="title" name="title" value="{{old('title')}}">
                   </div>
 
                   <label for="series">Series</label>
                   <div class="col-12">
-                     <input type="text" id="series" name="series">
+                     <input type="text" id="series" name="series" value="{{old('series')}}">
                   </div>
 
                   <label for="img">Imagine</label>
                   <div class="col-12">
-                     <input type="url" id="img" name="thumb">
+                     <input type="url" id="img" name="thumb" value="{{old('thumb')}}">
                   </div>
 
                   <label for="price">price</label>
                   <div class="col-12">
-                     <input type="number" id="price" name="price">
+                     <input type="number" id="price" name="price" value="{{old('price')}}">
                   </div>
 
                   <label for="sale_date">Sale date</label>
                   <div class="col-12">
-                     <input type="date" id="sale_date" name="sale_date">
+                     <input type="date" id="sale_date" name="sale_date" value="{{old('sale_date')}}">
                   </div>
 
-                  <label for="type">Type</label>
+                  {{-- <label for="type">Type</label>
                   <div class="col-12">
                      <select name="type" id="type">
                         @foreach ($comic_type as $key => $type)
                            <option class="text-uppercase">{{ $key }}</option>
                         @endforeach
                      </select>
-                  </div>
+                  </div> --}}
 
                   <label for="description">descripton</label>
                   <div class="col-12">
-                     <textarea name="description" id="description"></textarea>
+                     <textarea name="description" id="description">{{old('description')}}</textarea>
                   </div>
 
                   <div class="col-12 text-center">

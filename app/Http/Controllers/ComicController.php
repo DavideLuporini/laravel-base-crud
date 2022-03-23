@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Comic;
+use Illuminate\Validation\Rule;
 
 class ComicController extends Controller
 {
@@ -79,12 +80,23 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
+        $request->validate(
+            [
+                'title' => ['required', 'string', Rule::unique('comics')->ignore($comic->id)],
+                'series' => ['required', 'string', Rule::unique('comics')->ignore($comic->id)],
+            ],
+            [
+                'required' => ' :attribute is obbligatory!',
+                'string' => ' :attribute must be a :attribute!',
+            ]
+        );
         $data = $request->all();
 
-        $comic->fill($data);
-        $comic->save();
+        $comic = Comic::create($data);
 
-        return redirect()->route('comics.index', $comic->id);
+
+
+        return redirect()->route('comics.show', $comic->id);
     }
 
     /**

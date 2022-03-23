@@ -7,6 +7,14 @@
       <div class="row">
          <div class="col-12">
 
+            @if ($errors->any())>
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            @endif
+
             <form method="POST" action="{{ route('comics.update' , $comic) }}">
                 @method('PUT')
                 @csrf
@@ -15,7 +23,7 @@
 
                   <label for="title">Title</label>
                   <div class="col-12">
-                     <input type="text" id="title" name="title" value="{{ $comic->title }}">
+                     <input type="text" id="title" name="title" value="{{ $comic->title }}" >
                   </div>
 
                   <label for="series">Series</label>
@@ -39,18 +47,18 @@
                      <input type="date" id="sale_date" name="sale_date" value="{{ $comic->sale_date }}">
                   </div>
 
-                  <label for="type">Type</label>
+                  {{-- <label for="type">Type</label>
                   <div class="col-12">
-                     <select name="type" id="type">
+                     {{-- <select name="type" id="type"> --}}
                         {{-- @foreach ($comic->key as $key => $type)
                            <option value="{{ $comic->type }}" class="text-uppercase">{{ $key }}</option>
                         @endforeach --}}
-                     </select>
-                  </div>
+                     {{-- </select> 
+                  </div> --}}
 
                   <label for="description">descripton</label>
                   <div class="col-12">
-                     <textarea name="description" id="description" value="{{ $comic->description }}"></textarea>
+                     <textarea name="description" id="description">{{ $comic->description }}</textarea>
                   </div>
 
                   <div class="col-12 text-center">
