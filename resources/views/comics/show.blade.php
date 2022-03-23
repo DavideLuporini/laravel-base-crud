@@ -24,6 +24,7 @@
 
                   </form>
                   <a href="{{ route('comics.index') }}" class="btn">back</a>
+                  <a href="{{ route('comics.edit' , $comic ) }}" class="btn">edit</a>
                </div>
             </div>
          </div>
